@@ -1,0 +1,24 @@
+{
+  "name": "MoviesDB",
+  "private": true,
+  "version": "0.0.0",
+  "description": "MoviesDB AngularJS web application",
+  "dependencies": {
+    "angular": "^1.6.5",
+    "angular-modal-service": "^0.12.1",
+    "angular-route": "^1.6.5",
+    "angular-sanitize": "^1.6.5",
+    "express": "^4.15.4",
+    "karma-jasmine": "^1.1.0",
+    "server": "^1.0.0-beta.1"
+  },
+  "scripts": {},
+  "main": "./server.js",
+  "repository": "",
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "karma-coverage": "^1.1.1"
+  }
+}

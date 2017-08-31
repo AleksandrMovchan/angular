@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link media="all" rel="stylesheet" href="css/styles.css">
+    <!--angular-->
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-modal-service/dst/angular-modal-service.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-sanitize/angular-sanitize.min.js"></script>
+    <!--core-->
+    <script type="text/javascript" src="app/main.js"></script>
+    <!--services-->
+    <script type="text/javascript" src="app/services/upcomingService.js"></script>
+    <script type="text/javascript" src="app/services/aboutMovieService.js"></script>
+    <script type="text/javascript" src="app/services/movieCreditsService.js"></script>
+    <script type="text/javascript" src="app/services/movieTrailersService.js"></script>
+    <!--<script type="text/javascript" src="app/services/moviesSearchSrv.js"></script>-->
+    <!--controllers-->
+    <!--<script type="text/javascript" src="app/controllers/parentController.js"></script>-->
+    <!--<script type="text/javascript" src="app/controllers/upcomingController.js"></script>-->
+    <!--<script type="text/javascript" src="app/controllers/moviesSearchCtrl.js"></script>-->
+    <!--<script type="text/javascript" src="app/controllers/renderingController.js"></script>-->
+    <script type="text/javascript" src="app/controllers/upcomingMoviesCtrl.js"></script>
+    <script type="text/javascript" src="app/controllers/aboutMovieCtrl.js"></script>
+    <!--<script type="text/javascript" src="app/main.js"></script>-->
+    <script type="text/javascript" src="app/filters/formatRelease.js"></script>
+</head>
+<body ng-app="movies-app">
+<!--<div class="wrapper" ng-controller="parentController">-->
+    <!--<aside>-->
+        <!--<div class="movie-search" ng-controller="moviesSearchController">-->
+            <!--<form action="">-->
+                <!--<label for="film-search-name">Поиск по названию</label><input type="text" id="film-search-name" ng-model="movieSearch.name">-->
+                <!--<label for="show-select">Выберите тип</label>-->
+                <!--<select id="show-select" ng-model="movieSearch.typeSelected">-->
+                    <!--<option ng-repeat="showType in movieSearch.showTypes" ng-value="showType.value">{{showType.name}}</option>-->
+                <!--</select>-->
+                <!--<button type="button" ng-click="search()">Найти</button>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</aside>-->
+    <div class="main-content">
+        <!--<div class="search-results" ng-controller="renderingController">-->
+            <!--<h2>Search results</h2>-->
+            <!--<div ng-repeat="movie in srchmedia">-->
+                <!--<div class="image-container">-->
+                    <!--<img ng-src="{{movie.poster_path == null ?-->
+                   <!--'img/image-unavailable.jpg' : 'https://image.tmdb.org/t/p/w300' + movie.poster_path}}">-->
+                <!--</div>-->
+                <!--<p>Название: {{movie.title}}</p>-->
+                <!--<p>Название на языке оригинала: {{movie.original_title}}</p>-->
+            <!--</div>-->
+        <!--</div>-->
+        <div ng-view></div>
+
+    </div>
+<!--</div>-->
+</body>
+</html>

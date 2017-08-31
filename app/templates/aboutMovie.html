@@ -1,0 +1,35 @@
+<div class="movie-wrapper">
+    <div class="movie-poster">
+        <img ng-src="https://image.tmdb.org/t/p/w300{{aboutMovie.poster_path}}"">
+    </div>
+    <div class="about-movie">
+        <div class="movie-description">
+            <h2 class="movie-name">{{aboutMovie.title}}</h2>
+            <div class="movie-attr">
+                <div>{{aboutMovie.release_date | formatReleaseDate}}</div>
+                <div>{{aboutMovie.vote_average}}</div>
+                <div>
+                    <div>{{aboutMovie.genres.length > 1 ? "Жанры" : "Жанр"}}</div>
+                    <ul>
+                        <li ng-repeat="genre in aboutMovie.genres">{{genre.name}}</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="movie-teaser">
+                <p>{{aboutMovie.overview}}</p>
+            </div>
+        </div>
+        <div class="movie-trailer"></div>
+    </div>
+    <div class="cast">
+        <div class="actor-description" ng-repeat="actor in movieCredits | limitTo: 5">
+            <div class="actor-photo">
+                <img ng-src="{{actor.profile_path == null ? 'img/image-unavailable.jpg'
+                            : 'https://image.tmdb.org/t/p/w300' + actor.profile_path}}">
+                <!--<img ng-src="https://image.tmdb.org/t/p/w300{{actor.profile_path}}"">-->
+            </div>
+            <div class="actor-name">{{actor.name}}</div>
+            <div class="character-name">{{actor.character}}</div>
+        </div>
+    </div>
+</div>

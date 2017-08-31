@@ -1,0 +1,13 @@
+<div class="content">
+    <h2>TOP-20 upcoming films</h2>
+    <ol>
+        <li ng-repeat="movie in upcmovies">
+            <a href="#!about_movie/{{movie.id}}">
+            <!--<a href="#!about_movie">-->
+                <div class="image-container"><img ng-src="https://image.tmdb.org/t/p/w300{{movie.poster_path}}"></div>
+                <p>Название: {{movie.title}}</p>
+                <p>Название на языке оригинала: {{movie.original_title}}</p>
+            </a>
+        </li>
+    </ol>
+</div>
